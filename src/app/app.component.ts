@@ -97,7 +97,7 @@ export class AppComponent {
   @Input() newSmartJoke: { question: string; answer: string};
 
   addJoke(newSmartJoke: SmartJoke): void {
-    this.smartJokes.push(newSmartJoke);
+    this.smartJokes.unshift(newSmartJoke);
   }
 
   deleteJoke(index: number): void {
