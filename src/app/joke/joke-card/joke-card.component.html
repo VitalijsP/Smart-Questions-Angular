@@ -1,0 +1,20 @@
+<div class="card  mb-3 p-3">
+  <h6>Question: {{ joke.question }}</h6>
+  <p [hidden]="!isVisible">Answer: {{ joke.answer }}</p>
+<div class="cardButtons">
+  <button
+  type="button"
+  class="btn btn-secondary mr-2"
+  (click)="isVisible = !isVisible"
+>
+  Tell me
+</button>
+<button
+  type="button"
+  class="btn btn-secondary"
+  (click)="deleteJoke()"
+>
+  Delete
+</button>
+</div>
+</div>

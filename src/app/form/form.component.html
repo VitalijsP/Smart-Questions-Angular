@@ -1,0 +1,27 @@
+<div class="card mb-3 p-3">
+  <h1 class="text-center">{{ title }}</h1>
+  <input
+    class="input form-control mb-2"
+    type="text"
+    placeholder="write your smart question here..."
+    name="newQuestion"
+    [(ngModel)]="newQuestion"
+  />
+  <input
+  class="input form-control mb-2"
+  type="text"
+  placeholder="write your smart answer here"
+  name="newAnswer"
+  [(ngModel)]="newAnswer"
+  />
+ <div>
+  <button
+  [disabled]="!newQuestion || !newAnswer"
+  type="button"
+  class="btn btn-secondary"
+  (click)="createJoke()"
+  >
+  Create
+</button>
+ </div>
+</div>
